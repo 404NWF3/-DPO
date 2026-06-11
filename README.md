@@ -78,11 +78,11 @@ pptx的效果还不太高。
 
 图片会主动进行 OCR 之后再进行实体识别。
 
-![图片](image-6.png)
+![图片](assets/image-6.png)
 
 5. 个性化 System Prompt
 
-![alt text](image-7.png)
+![alt text](assets/image-7.png)
 
 
 ## 未来展望
