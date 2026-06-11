@@ -1,0 +1,12 @@
+services:
+  dpo-agent:
+    build: .
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    volumes:
+      - ./outputs:/app/outputs
+      - ./examples:/app/examples
+      - ./.claude/skills:/app/.claude/skills
+    restart: unless-stopped

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dpo-agent"
+version = "0.1.0"
+description = "DPO Agent - document redaction tool: detect and mask sensitive info before sending docs to LLMs"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "click>=8.0",
+    "gradio>=4.0",
+    "anthropic>=0.40",
+    "python-docx>=1.1",
+    "python-pptx>=0.6.23",
+    "pypdf>=4.0",
+    "pillow>=10.0",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+agent = ["claude-agent-sdk>=0.1.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+dpo-redact = "dpo_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

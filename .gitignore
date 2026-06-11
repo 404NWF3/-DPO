@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+outputs/
+!outputs/.gitkeep
+.gradio/
+flagged/

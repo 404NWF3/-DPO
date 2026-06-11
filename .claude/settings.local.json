@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Recurse -Depth 4 -Name)",
+      "Bash(Select-Object -First 200)",
+      "PowerShell(Write-Output \"ANTHROPIC_API_KEY set: $\\([bool]$env:ANTHROPIC_API_KEY\\)\"; Write-Output \"ZHIPU_API_KEY set: $\\([bool]$env:ZHIPU_API_KEY\\)\"; Write-Output \"ANTHROPIC_BASE_URL: $env:ANTHROPIC_BASE_URL\"; Write-Output \"ANTHROPIC_MODEL: $env:ANTHROPIC_MODEL\")",
+      "PowerShell(New-Item *)",
+      "PowerShell(pip install *)"
+    ]
+  }
+}
